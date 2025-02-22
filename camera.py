@@ -3,11 +3,11 @@ import numpy as np
 import glob
 
 # 棋盘格的行数和列数
-chessboard_rows = 6-1  # 棋盘格的行数
-chessboard_cols = 9-1  # 棋盘格的列数
+chessboard_rows = 7-1  # 棋盘格的行数
+chessboard_cols = 10-1  # 棋盘格的列数
 
 # 棋盘格每个方格的实际尺寸（单位：毫米）
-square_size = 28.9  # 每个方格边长
+square_size = 25.0  # 每个方格边长
 
 # 3D 点和 2D 点的存储列表
 object_points = []  # 存储棋盘格在3D空间中的点
@@ -20,7 +20,7 @@ object_3d_points *= square_size
 
 # 读取本地图片
 image_folder = "./images/"  # 替换为您的图片文件夹路径
-images = glob.glob(image_folder + "*.jpg")  # 查找所有JPG图片
+images = glob.glob(image_folder + "*.bmp")  # 查找所有JPG图片
 
 if not images:
     print("未找到棋盘格图片，请检查路径和文件格式。")
